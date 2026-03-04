@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cloud Arcade | Unblocked</title>
+    <link id="favicon" rel="icon" type="image/x-icon" href="https://www.google.com/favicon.ico">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <h1>Cloud<span>Arcade</span></h1>
+        <div class="nav-controls">
+            <input type="text" id="searchBar" placeholder="Search games...">
+            <button class="panic-btn" onclick="panic()">PANIC (ESC)</button>
+        </div>
+    </nav>
+
+    <main class="game-grid" id="gameGrid"></main>
+
+    <section class="suggestion-box">
+        <h3>Suggest a Game</h3>
+        <form id="suggestionForm">
+            <input type="text" id="suggestName" placeholder="Game Name" required>
+            <input type="url" id="suggestUrl" placeholder="Game URL (Optional)">
+            <button type="submit">Submit Suggestion</button>
+        </form>
+        <p id="formStatus"></p>
+    </section>
+
+    <div id="gameModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <iframe src="" id="gameFrame" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

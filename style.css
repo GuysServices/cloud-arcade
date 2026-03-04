@@ -1,0 +1,143 @@
+body {
+    background-color: #121212;
+    color: white;
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: #1e1e1e;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+}
+
+h1 span { color: #00cf5d; }
+
+.nav-controls {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+#searchBar {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    width: 250px;
+    background: #333;
+    color: white;
+}
+
+.panic-btn {
+    background: #ff4b4b;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.panic-btn:hover { background: #ff0000; }
+
+.game-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.game-card {
+    background: #1e1e1e;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.2s;
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+.game-card:hover { transform: scale(1.05); }
+
+.game-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.cloak-btn {
+    background: #00cf5d;
+    border: none;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 4px;
+    margin-top: 5px;
+    cursor: pointer;
+    font-size: 0.75rem;
+}
+
+/* Suggestion Box Styling */
+.suggestion-box {
+    background: #1e1e1e;
+    margin: 40px 20px;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    border: 1px solid #333;
+}
+
+#suggestionForm {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 0 auto;
+    gap: 12px;
+}
+
+#suggestionForm input {
+    padding: 12px;
+    border-radius: 5px;
+    border: 1px solid #444;
+    background: #121212;
+    color: white;
+}
+
+#suggestionForm button {
+    background: #00cf5d;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.9);
+}
+
+.modal-content {
+    position: relative;
+    width: 90%;
+    height: 85%;
+    margin: 2% auto;
+}
+
+#gameFrame { width: 100%; height: 100%; border-radius: 10px; background: white; }
+
+.close {
+    position: absolute;
+    top: -35px; right: 0;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+}
